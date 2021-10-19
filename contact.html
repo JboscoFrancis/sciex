@@ -17,6 +17,10 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,19 +42,17 @@
 
 <body>
 
-  
         <!-- ======= Top Bar ======= -->
         <div id="topbar" class="d-none d-lg-flex align-items-center">
-          <div class="container d-flex align-items-center justify-content-between">
+          <div class="container d-flex align-items-center justify-content-between" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex align-items-center">
-              <i class='bx bx-time-five' ></i> Monday - Saturday, 8AM - 10PM
+              <i class='bx bx-time-five' ></i> Monday - Saturday, 8:00 AM - 4:00 PM
             </div>
             <div class="d-flex align-items-center">
               <i class='bx bx-phone-call' ></i> Hotline +255 699 68772, +255 677 68772
             </div>
           </div>
         </div>
-
   <!-- ======= Header ======= -->
   <header id="header" class="">
     <div class="container d-flex justify-content-between align-items-center">
@@ -72,7 +74,7 @@
 
       <div class="right-side">
         <!-- <a href="">sign in</a> -->
-        <a href="#" class="btn btn-sm btn-outline-warning d-none d-sm-block">customer</a>
+        <!-- <a href="#" class="btn btn-sm btn-outline-warning d-none d-sm-block">customer</a> -->
       </div>
 
     </div>
@@ -128,7 +130,7 @@
               </div>
               <div class="col-md-6 p-2">
                   <h5 class="text-center">Message us</h5>
-                  <form action="" method="post" role="form" class="contact-form pt-1">
+                  <form action="send_email.php" method="POST" role="form" class="contact-form pt-1" onsubmit="return validateForm()">
                       <div class="row">
                         <div class="col-md-6 form-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -143,9 +145,19 @@
                       <div class="form-group mt-3">
                         <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                       </div>
-                      <div class="text-center pt-2"><button class="btn btn-sm btn-success" type="submit">submit</button></div>
+                      <div class="mt-4">
+                        <small>verify you are not a robot</small>
+                        <input class="" onpaste="return false;" type="text" style="width: 60px; margin-right: 6px;" id="captcha"><span class="pl-3" id="captchadisplay" style=" font-size: 15px; font-family: 'Rock Salt', cursive; font-style: italic; background: grey; padding: 0px 10px;"></span>
+                        <input class="d-none" type="text" id="captchaValue" readonly value="">
+                        <div class="text-danger mt-3" id="captchaError"></div>
+                      </div>
+                      <div class="text-center pt-2"><button class="btn btn-sm btn-outline-success" type="submit">submit message</button></div>
                     </form>
               </div>
+          </div>
+<hr>
+          <div class="complaints py-3 text-center">
+            <a class="btn btn-outline-success" href="https://forms.office.com/Pages/ResponsePage.aspx?id=PWHlUGnFrk60wP2nui_t7_72te4qtRxIpDMqy3Vp1PpUMUdQVlcyTUhBUjZPWkMwVEVKRDlXOTVZSy4u" target="_blank">Customer Complaints Form</a>
           </div>
       </div>
   </section>
@@ -171,6 +183,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -182,6 +195,24 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    captchaValue = document.getElementById('captchaValue').value = Math.floor(Math.random() * 9781) + 1021;
+    document.getElementById('captchadisplay').innerText = (captchaValue)
+    
+        function validateForm(){
+            var captcha = document.getElementById('captcha').value
+            var captchaValue = document.getElementById('captchaValue').value
+            if (captcha != captchaValue){
+                document.getElementById('captchaError').innerHTML = "<span class='alert alert-warning'>Incorrect captcha</span>"
+                
+                captchaValue = document.getElementById('captchaValue').value = Math.floor(Math.random() * 9781) + 1021;
+                document.getElementById('captchadisplay').innerText = (captchaValue)
+    
+                return false
+            }
+        }
+  </script>
 
 </body>
 
