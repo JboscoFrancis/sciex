@@ -145,9 +145,11 @@
                       <div class="form-group mt-3">
                         <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                       </div>
-                      <div class="mt-4">
-                        <small>verify you are not a robot</small>
-                        <input class="" onpaste="return false;" type="text" style="width: 60px; margin-right: 6px;" id="captcha"><span class="pl-3" id="captchadisplay" style=" font-size: 15px; font-family: 'Rock Salt', cursive; font-style: italic; background: grey; padding: 0px 10px;"></span>
+                      <div class="mt-4 text-center">
+                        <p>Are you human?</p>
+                        <small>write this number</small>
+                        <span class="pl-3" id="captchadisplay" style=" font-size: 15px; font-family: 'Rock Salt', cursive; font-style: italic; background: grey; padding: 0px 5px;"></span>
+                        <input class="" onpaste="return false;" type="text" style="width: 60px; margin-right: 6px;" id="captcha">
                         <input class="d-none" type="text" id="captchaValue" readonly value="">
                         <div class="text-danger mt-3" id="captchaError"></div>
                       </div>
