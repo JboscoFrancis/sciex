@@ -25,6 +25,11 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- parallax cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -42,14 +47,13 @@
         <div id="topbar" class="d-none d-lg-flex align-items-center">
           <div class="container d-flex align-items-center justify-content-between" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex align-items-center">
-              <i class='bx bx-time-five' ></i> Monday - Saturday, 8AM - 10PM
+              <i class='bx bx-time-five' ></i> Monday - Saturday, 8:00 AM - 4:00 PM
             </div>
             <div class="d-flex align-items-center">
               <i class='bx bx-phone-call' ></i> Hotline +255 699 68772, +255 677 68772
             </div>
           </div>
         </div>
-
   <!-- ======= Header ======= -->
   <header id="header" class="">
     <div class="container d-flex justify-content-between align-items-center">
@@ -71,7 +75,7 @@
 
       <div class="right-side">
         <!-- <a href="">sign in</a> -->
-        <a href="#" class="btn btn-sm btn-outline-warning d-none d-sm-block">customer</a>
+        <!-- <a href="#" class="btn btn-sm btn-outline-warning d-none d-sm-block">customer</a> -->
       </div>
 
     </div>
@@ -107,23 +111,23 @@
         <div class="row mb-4 text-center product-wr1" data-aos="zoom-in">
           <h5 class="mb-3">Medical Diagnostics Equipment and their consumables includes</h5>
           <div class="col-sm mb-1 card">
-            <h6>Roche Diagnostics</h6>
+            <!-- <h6>Roche Diagnostics</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/roche.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>BD</h6>
+            <!-- <h6>BD</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/bd-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Sysmex</h6>
+            <!-- <h6>Sysmex</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/sysmex.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Sebia</h6>
+            <!-- <h6>Sebia</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/sebia.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Opti Medical</h6>
+            <!-- <h6>Opti Medical</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/optimedical.png" alt="">
           </div>
         </div>
@@ -131,48 +135,52 @@
         <div class="row mb-4 text-center py-4 product-wr2">
           <h5 class="mb-3">Laboratory Instruments, Equipment, Glassware, Reagents and Consumables IncludeS</h5>
           <div class="col-sm mb-1 card">
-            <h6>Qiagen</h6>
+            <!-- <h6>Qiagen</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/qiagen-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Merck</h6>
+            <!-- <h6>Merck</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/merck-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Gilson</h6>
+            <!-- <h6>Gilson</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/gilson-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Corning</h6>
+            <!-- <h6>Corning</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/corning-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Leica</h6>
+            <!-- <h6>Leica</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/leica-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Zeiss</h6>
+            <!-- <h6>Zeiss</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/zeiss-logo.png" alt="">
           </div>
           <div class="col-sm mb-1 card">
-            <h6>Baxter</h6>
+            <!-- <h6>Baxter</h6> -->
             <img class="img-fluid" src="assets/img/product-logo/baxter-logo.png" alt="">
           </div>
         </div>
 
-        <div class="row mb-4 text-center product-wr3">
+        <div class="row mb-4 text-center product-wr3 justify-content-center">
           <h5 class="mb-3">Pharmaceutical Companies Includes</h5>
-          <div class="col-sm mb-1 card">
-            <h6>Medochemie</h6>
-            <img class="img-fluid" src="assets/img/product-logo/medochemie-logo.png" alt="">
-          </div>
-          <div class="col-sm mb-1 card">
-            <h6>Lative life science</h6>
-            <img class="img-fluid" src="assets/img/product-logo/lative-logo.jpg" alt="">
-          </div>
-          <div class="col-sm mb-1 card">
-            <h6>CBC Pharma</h6>
-            <img class="img-fluid" src="assets/img/product-logo/cbc-pharma.png" alt="">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-sm mb-1 card">
+                <!-- <h6>Medochemie</h6> -->
+                <img class="img-fluid" src="assets/img/product-logo/medochemie-logo.png" alt="">
+              </div>
+              <div class="col-sm mb-1 card">
+                <!-- <h6>Lative life science</h6> -->
+                <img class="img-fluid" src="assets/img/product-logo/lative-logo.jpg" alt="">
+              </div>
+              <div class="col-sm mb-1 card">
+                <!-- <h6>CBC Pharma</h6> -->
+                <img class="img-fluid" src="assets/img/product-logo/cbc-pharma.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
 
