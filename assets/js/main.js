@@ -157,10 +157,11 @@ $('.owl-carousel').owlCarousel({
           items:2
       },
       650:{
-          items:2
+          items:3
       },
       820:{
-          items:3
+          items:4
     },
   }
 })
+
