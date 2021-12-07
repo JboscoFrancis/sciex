@@ -331,6 +331,12 @@ p{
 .right-side .btn:hover{
   background: #00bbf927;
 }
+.header-scrolled{
+	transition: 1.2s;
+	top: -0.7rem !important;
+	background-color: #008591af!important;
+	}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
