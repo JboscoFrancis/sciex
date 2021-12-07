@@ -136,6 +136,15 @@
 
 })()
 
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    console.log('hey.......')
+      $('#header').addClass('header-scrolled');
+} else {
+  $('#header').removeClass('header-scrolled');
+}
+});
+
 const lightbox = GLightbox({
   touchNavigation: true,
   loop: true,
