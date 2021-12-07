@@ -937,3 +937,21 @@ section {
   font-size: 14px;
   text-align: center;
 }
+#footer .col-md-4 p{
+  color: #eaf8f7;
+  font-size: 1.1rem;
+}
+#footer ul{
+  padding: 0;
+}
+#footer li{
+  list-style: none;
+}
+#footer a{
+  color: #c9d3fd;
+  transition: all 1s;
+}
+#footer a:hover{
+  color: #ade5ff;
+  font-size: 15px;
+}
